@@ -9,7 +9,8 @@
   box-sizing: border-box;
   border: 1px solid black;
   border-radius: 3px;
-  z-index: 1
+  z-index: 1;
+  background-color: rgba(212,212,255,0.5) 
 }
 .onscreen-keyboard-col {
   display: inline-block;
@@ -60,9 +61,34 @@
   border-radius: 5px;
   box-sizing: border-box;
   border: 1px solid black;
+  overflow: hidden;
+  text-align: center;
 }
 .onscreen-keyboard-key:hover {
   background-color: rgba(0,255,255,0.75);
+  cursor: pointer;
+}
+.onscreen-keyboard-key-content-centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.onscreen-keyboard-enter-key {
+  display: inline-block; 
+  position: absolute; 
+  top: 3.5%;
+  height: 190%;
+  background-color: rgba(255,255,255,0.75);
+  border-radius: 5px;
+  box-sizing: border-box;
+  border: 1px solid black;
+  overflow: hidden;
+  text-align: center;
+}
+.onscreen-keyboard-enter-key:hover {
+  background-color: rgba(0,255,255,0.75);
+  cursor: pointer;
 }
 
 .onscreen-keyboard-key-spacer {
