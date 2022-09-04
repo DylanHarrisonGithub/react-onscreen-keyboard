@@ -7,4 +7,4 @@ Subscribe to keypresses programatically.
 
 Dispatch KeyboardEvents programatically.
 
-![image info](./screenshots/layout.png)
+![image info](./screenshots/layout2.png)
