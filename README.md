@@ -1,2 +1,10 @@
 # react-onscreen-keyboard
-onscreen visual keyboard for click, touch, pen, etc.. events, optionally dispatched as equivalent key events or subscribe to input events. Additional used to visually convey user keypresses
+Responsive on-screen visual keyboard for click, touch, pen, etc.. events.
+
+Visually convey user keypresses.
+
+Subscribe to keypresses programatically.
+
+Dispatch KeyboardEvents programatically.
+
+![image info](./screenshots/layout.png)
