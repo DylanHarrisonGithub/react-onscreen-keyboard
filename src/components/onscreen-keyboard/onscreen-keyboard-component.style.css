@@ -1,0 +1,111 @@
+.onscreen-keyboard {
+  max-width: 100%;
+  padding-bottom: 27.5%;
+  margin: 0;
+  padding-top: 0;
+  padding-left: 0;
+  padding-right: 0;
+  position: relative; 
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-radius: 3px;
+  z-index: 1
+}
+.onscreen-keyboard-col {
+  display: inline-block;
+  position: absolute;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+.onscreen-keyboard-col-1 {
+  width: 66.66%;
+}
+.onscreen-keyboard-col-2 {
+  left: 66.66%;
+  width: 14.33%;
+}
+.onscreen-keyboard-col-3 {
+  left: 80.99%;
+  width: 19.01%;
+}
+
+.onscreen-keyboard-col-content {
+  position: absolute;
+  left: 0.5%;
+  top: 2%;
+  height: 96.5%
+}
+.onscreen-keyboard-col-1-content-right {
+  right: 0.25%;
+}
+.onscreen-keyboard-col-2-content-right {
+  right: 1.5%;
+}
+.onscreen-keyboard-col-3-content-right {
+  right: 1.5%;
+}
+
+.onscreen-keyboard-row {
+  position: relative;
+  height: 16.66%;
+}
+
+.onscreen-keyboard-key {
+  display: inline-block; 
+  position: relative; 
+  top: 3.5%;
+  height: 90%;
+  background-color: rgba(255,255,255,0.75);
+  border-radius: 5px;
+  box-sizing: border-box;
+  border: 1px solid black;
+}
+.onscreen-keyboard-key:hover {
+  background-color: rgba(0,255,255,0.75);
+}
+
+.onscreen-keyboard-key-spacer {
+  display: inline-block; 
+  position: relative; 
+  top: 3.5%;
+  height: 90%;
+}
+.onscreen-keyboard-key-1-width-1 {
+  margin-left: 0.65%; 
+  width: 6.2%;
+}
+.onscreen-keyboard-key-1-width-1-5 {
+  margin-left: 0.65%; 
+  width: 8%;
+}
+.onscreen-keyboard-key-1-width-2 {
+  margin-left: 0.65%; 
+  width: 9.5%;
+}
+.onscreen-keyboard-key-1-width-3 {
+  margin-left: 0.65%; 
+  width: 11.25%;
+}
+.onscreen-keyboard-key-1-width-4 {
+  margin-left: 0.65%; 
+  width: 14.75%;
+}
+.onscreen-keyboard-key-1-width-5 {
+  margin-left: 0.65%; 
+  width: 40.6%;
+}
+
+.onscreen-keyboard-key-2-width-1 {
+  margin-left: 4.2%; 
+  width: 28%
+}
+
+.onscreen-keyboard-key-3-width-1 {
+  margin-left: 3.25%; 
+  width: 21%
+}
+.onscreen-keyboard-key-3-width-2 {
+  margin-left: 3.25%; 
+  width: 45%
+}
