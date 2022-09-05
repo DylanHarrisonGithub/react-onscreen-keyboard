@@ -7,10 +7,15 @@
   padding-right: 0;
   position: relative; 
   box-sizing: border-box;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   border-radius: 3px;
   z-index: 1;
-  background-color: rgba(212,212,255,0.5) 
+  background-color: rgb(178, 193, 211);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  color: rgb(146, 150, 154);
+  /* opacity: 0.65; */
 }
 .onscreen-keyboard-col {
   display: inline-block;
@@ -57,16 +62,20 @@
   position: relative; 
   top: 3.5%;
   height: 90%;
-  background-color: rgba(255,255,255,0.75);
+  background-color: rgba(255,255,255,1);
   border-radius: 5px;
   box-sizing: border-box;
-  border: 1px solid black;
+  
   overflow: hidden;
   text-align: center;
+
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,  rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
 }
 .onscreen-keyboard-key:hover {
-  background-color: rgba(0,255,255,0.75);
+  /* background-color: rgba(0, 149, 255, 0.75); */
   cursor: pointer;
+  box-shadow: none;
+  border: 1px solid rgb(150, 150, 150);
 }
 .onscreen-keyboard-key-content-centered {
   position: absolute;
@@ -79,16 +88,17 @@
   position: absolute; 
   top: 3.5%;
   height: 190%;
-  background-color: rgba(255,255,255,0.75);
+  background-color: rgba(255,255,255,1);
   border-radius: 5px;
   box-sizing: border-box;
-  border: 1px solid black;
   overflow: hidden;
   text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,  rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
 }
 .onscreen-keyboard-enter-key:hover {
-  background-color: rgba(0,255,255,0.75);
   cursor: pointer;
+  box-shadow: none;
+  border: 1px solid rgb(150, 150, 150);
 }
 
 .onscreen-keyboard-key-spacer {
