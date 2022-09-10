@@ -1,31 +1,59 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { mappedKey, keyboardMap } from './onscreen-keyboard-map';
 import './onscreen-keyboard-component.style.css';
 
-const OnscreenKeyboardComponent: React.FC<{disabled?: string[], enabled?: string[], highlighted?: string[], subs?: (key: string) => void}> = ({disabled, enabled, highlighted, subs}) => {
+const OnscreenKeyboardComponent: React.FC<{
+  disabled?: string[], 
+  enabled?: string[], 
+  highlighted?: string[],
+  presses?: { code: string, key: string}[],
+  callback?: (keydowns: { code: string, key: string }[], keyups: { code: string, key: string }[], keypresses: { code: string, key: string }[]) => void
+}> = ({disabled, enabled, highlighted, presses, callback}) => {
+
+  const didMountRef = useRef<boolean>(false);
 
   const [keypresses, setKeypresses] = useState<{code: string, key: string}[]>([]);
+  const previousKeyPressesRef = useRef<{code: string, key: string}[]>([]);
 
   useEffect(() => {
       document.addEventListener('keydown', (ev: KeyboardEvent) => {
-        subs?.(ev.key);
         setKeypresses(keys => keys.filter(key => (key.code === ev.code && key.key === ev.key)).length ? keys : [...keys, {code: ev.code, key: ev.key }]);
       });
       document.addEventListener('keyup', (ev: KeyboardEvent) => {
         setKeypresses(keypresses => keypresses.filter(key => !(key.code === ev.code)));
       });
-      document.addEventListener('blur', () => setKeypresses([]));
-      console.log('hi');
+      //document.addEventListener('blur', () => setKeypresses([]));
+
+      presses?.forEach(press => dispatchKeydown(press.code, press.key));
+      didMountRef.current = true;
+
+      // return () => { cleanup eventlisteners }
   }, []);
+
+  useEffect(() => {
+    const keydowns = keypresses.filter(keypress => !previousKeyPressesRef.current.includes(keypress));
+    const keyups = previousKeyPressesRef.current.filter(keypress => !keypresses.includes(keypress));
+    previousKeyPressesRef.current = keypresses;
+    callback?.(keydowns, keyups, keypresses);
+  }, [keypresses]);
+
+
+  useEffect(() => {
+    const keydowns = presses?.filter(keypress => !(keypresses.includes(keypress)));
+    const keyups = keypresses.filter(keypress => !(presses!.includes(keypress)));
+
+    keydowns?.forEach(keypress => dispatchKeydown(keypress.code, keypress.key));
+    keyups?.forEach(keypress => dispatchKeyup(keypress.code, keypress.key));
+  }, [presses]);
 
   const dispatchKeydown = (code: string, key: string) => {
     document.dispatchEvent(new KeyboardEvent("keydown", {code: code, key: key}));
-  }
+  };
   const dispatchKeyup = (code: string, key: string) => {
     document.dispatchEvent(new KeyboardEvent("keyup", {code: code, key: key}));
-  }
+  };
 
-  const shiftDown: () => boolean = () => !!(keypresses.filter(key => (key.code === 'ShiftLeft' || key.code === 'ShiftRight')).length) 
+  const shiftDown: () => boolean = () => !!(keypresses.filter(key => (key.code === 'ShiftLeft' || key.code === 'ShiftRight')).length); 
 
   return (
     <div style={{height: '500px', padding: '5px'}}>

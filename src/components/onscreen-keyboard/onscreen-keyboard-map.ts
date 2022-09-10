@@ -72,17 +72,17 @@ export const keyboardMap: mappedKey[][][] = [
     ],
     [
       { label: ['shift'], classname: 'onscreen-keyboard-key onscreen-keyboard-key-1-width-4', code: 'ShiftLeft', key: ['Shift', 'Shift']},
-      { label: ['Z'], classname: 'onscreen-keyboard-key onscreen-keyboard-key-1-width-1', code: 'KeyA', key: ['z', 'Z']},
-      { label: ['X'], classname: 'onscreen-keyboard-key onscreen-keyboard-key-1-width-1', code: 'KeyS', key: ['x', 'x']},
-      { label: ['C'], classname: 'onscreen-keyboard-key onscreen-keyboard-key-1-width-1', code: 'KeyD', key: ['c', 'c']},
-      { label: ['V'], classname: 'onscreen-keyboard-key onscreen-keyboard-key-1-width-1', code: 'KeyF', key: ['v', 'V']},
-      { label: ['B'], classname: 'onscreen-keyboard-key onscreen-keyboard-key-1-width-1', code: 'KeyG', key: ['b', 'B']},
-      { label: ['N'], classname: 'onscreen-keyboard-key onscreen-keyboard-key-1-width-1', code: 'KeyH', key: ['n', 'N']},
-      { label: ['M'], classname: 'onscreen-keyboard-key onscreen-keyboard-key-1-width-1', code: 'KeyJ', key: ['m', 'M']},
-      { label: ['<', ','], classname: 'onscreen-keyboard-key onscreen-keyboard-key-1-width-1', code: 'KeyK', key: [',', '<']},
-      { label: ['>', '.'], classname: 'onscreen-keyboard-key onscreen-keyboard-key-1-width-1', code: 'KeyL', key: ['.', '>']},
-      { label: ['?', '/'], classname: 'onscreen-keyboard-key onscreen-keyboard-key-1-width-1', code: 'Semicolon', key: ['/', '?']},
-      { label: ['shift'], classname: 'onscreen-keyboard-key onscreen-keyboard-key-1-width-4', code: 'Enter', key: ['Shift', 'Shift']}
+      { label: ['Z'], classname: 'onscreen-keyboard-key onscreen-keyboard-key-1-width-1', code: 'KeyZ', key: ['z', 'Z']},
+      { label: ['X'], classname: 'onscreen-keyboard-key onscreen-keyboard-key-1-width-1', code: 'KeyX', key: ['x', 'x']},
+      { label: ['C'], classname: 'onscreen-keyboard-key onscreen-keyboard-key-1-width-1', code: 'KeyC', key: ['c', 'c']},
+      { label: ['V'], classname: 'onscreen-keyboard-key onscreen-keyboard-key-1-width-1', code: 'KeyV', key: ['v', 'V']},
+      { label: ['B'], classname: 'onscreen-keyboard-key onscreen-keyboard-key-1-width-1', code: 'KeyB', key: ['b', 'B']},
+      { label: ['N'], classname: 'onscreen-keyboard-key onscreen-keyboard-key-1-width-1', code: 'KeyN', key: ['n', 'N']},
+      { label: ['M'], classname: 'onscreen-keyboard-key onscreen-keyboard-key-1-width-1', code: 'KeyM', key: ['m', 'M']},
+      { label: ['<', ','], classname: 'onscreen-keyboard-key onscreen-keyboard-key-1-width-1', code: 'Comma', key: [',', '<']},
+      { label: ['>', '.'], classname: 'onscreen-keyboard-key onscreen-keyboard-key-1-width-1', code: 'Period', key: ['.', '>']},
+      { label: ['?', '/'], classname: 'onscreen-keyboard-key onscreen-keyboard-key-1-width-1', code: 'Slash', key: ['/', '?']},
+      { label: ['shift'], classname: 'onscreen-keyboard-key onscreen-keyboard-key-1-width-4', code: 'ShiftRight', key: ['Shift', 'Shift']}
     ],
     [
       { label: ['⌃', 'control'], classname: 'onscreen-keyboard-key onscreen-keyboard-key-1-width-2', code: 'ControlLeft', key: ['Control', 'Control'] },
