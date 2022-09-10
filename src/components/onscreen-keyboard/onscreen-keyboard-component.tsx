@@ -31,16 +31,18 @@ const OnscreenKeyboardComponent: React.FC<{
   }, []);
 
   useEffect(() => {
-    const keydowns = keypresses.filter(keypress => !previousKeyPressesRef.current.includes(keypress));
-    const keyups = previousKeyPressesRef.current.filter(keypress => !keypresses.includes(keypress));
+    const keydowns = keypresses.filter(keypress => !previousKeyPressesRef.current.some(k => (k.code === keypress.code && k.key === keypress.key)));
+    const keyups = previousKeyPressesRef.current.filter(keypress => !keypresses.some(k => (k.code === keypress.code && k.key === keypress.key)));
     previousKeyPressesRef.current = keypresses;
     callback?.(keydowns, keyups, keypresses);
   }, [keypresses]);
 
 
   useEffect(() => {
-    const keydowns = presses?.filter(keypress => !(keypresses.includes(keypress)));
-    const keyups = keypresses.filter(keypress => !(presses!.includes(keypress)));
+    
+    const keydowns = presses?.filter(keypress => !(keypresses.some(k => (k.code === keypress.code && k.key === keypress.key))));
+    const keyups = keypresses.filter(keypress => !(presses?.some(k => (k.code === keypress.code && k.key === keypress.key))));
+    console.log('presses: ', presses, '\nkeypresses: ', keypresses);
 
     keydowns?.forEach(keypress => dispatchKeydown(keypress.code, keypress.key));
     keyups?.forEach(keypress => dispatchKeyup(keypress.code, keypress.key));
