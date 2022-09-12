@@ -35,7 +35,8 @@ function App() {
 
   return (
     <div>
-      <OnscreenKeyboardComponent 
+      <OnscreenKeyboardComponent
+        disabled={['fn']}
         presses={presses}  
         callback={keyboardCallback}
       />

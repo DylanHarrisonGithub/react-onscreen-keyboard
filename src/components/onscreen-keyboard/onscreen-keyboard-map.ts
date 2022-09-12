@@ -151,7 +151,7 @@ export const keyboardMap: mappedKey[][][] = [
       { label: ['1'], classname: 'onscreen-keyboard-key onscreen-keyboard-key-3-width-1', code: 'Numpad1', key: ['1', '1']},
       { label: ['2'], classname: 'onscreen-keyboard-key onscreen-keyboard-key-3-width-1', code: 'Numpad2', key: ['2', '2']},
       { label: ['3'], classname: 'onscreen-keyboard-key onscreen-keyboard-key-3-width-1', code: 'Numpad3', key: ['3', '3']},
-      { label: ['+'], classname: 'onscreen-keyboard-enter-key onscreen-keyboard-key-3-width-1', code: 'NumpadEnter', key: ['Enter', 'Emter']}
+      { label: ['enter'], classname: 'onscreen-keyboard-enter-key onscreen-keyboard-key-3-width-1', code: 'NumpadEnter', key: ['Enter', 'Emter']}
     ],
     [
       { label: ['0'], classname: 'onscreen-keyboard-key onscreen-keyboard-key-3-width-2', code: 'Numpad0', key: ['0', '0']},
