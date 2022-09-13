@@ -1,0 +1,51 @@
+.input-onscreen-container {
+  position: relative;
+  display: inline-block;
+  border: 1px solid black;
+  height: 60px;
+  margin: 0;
+  padding: 0;
+  border-radius: 5px;
+}
+.input-onscreen-container .input-onscreen-container:focus {
+  box-shadow: 
+    0 0 60px 30px #fff,  /* inner white */
+    0 0 100px 60px #f0f, /* middle magenta */
+    0 0 140px 90px #0ff; /* outer cyan */;
+}
+
+.input-onscreen-input {
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border: none;
+  height: 40px;
+  padding: 10px;
+  margin: 0;
+  top: -14px;
+  width: 45vw;
+  line-height: 28px;
+  border-radius: 5px;
+}
+
+.input-onscreen-keyboard-button {
+  background-color: transparent;
+  height: 100%;
+  border: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  margin-right: 12px;
+}
+.input-onscreen-keyboard-button:hover {
+  cursor: pointer;
+}
+
+.input-onscreen-icon{
+  height: 40px;
+}
+
+.onscreen-keyboard-wrapper {
+  display: inline-block;
+  width: 52.5vw;
+}

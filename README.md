@@ -8,3 +8,5 @@ Subscribe to keypresses programatically.
 Dispatch KeyboardEvents programatically.
 
 ![image info](./screenshots/layout.png)
+
+![video info](./screenshots/recording.gif)
